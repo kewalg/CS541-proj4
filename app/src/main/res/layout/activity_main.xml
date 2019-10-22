@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/titleapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="myShoppingApp"
+        android:textSize="50dp" />
+
+    <EditText
+        android:id="@+id/edtusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleapp"
+        android:hint="username"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/edtpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtusername"
+        android:hint="password"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/btnsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtpassword"
+        android:text="submit" />
+
+
+    <Button
+        android:id="@+id/btnregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnsubmit"
+        android:text="register" />
+
+
+</RelativeLayout>
