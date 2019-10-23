@@ -23,12 +23,7 @@ public class MainActivity extends AppCompatActivity {
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (edtuser.getText().toString().equals("kewalg" )&& edtpass.getText().toString().equals("1234")){
-
-                    Intent i = new Intent(MainActivity.this, MenuActivity2.class);
-                    startActivity(i);
-                }
+                //add authentication from firebase
             }
         });
     }

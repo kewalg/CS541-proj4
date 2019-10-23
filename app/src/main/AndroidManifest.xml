@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FinalActivity4"></activity>
-        <activity android:name=".CartActivity3" />
-        <activity android:name=".MenuActivity2" />
+        <activity android:name=".RegisterActivity2"></activity>
+        <activity android:name=".FinalActivity5" />
+        <activity android:name=".CartActivity4" />
+        <activity android:name=".MenuActivity3" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
