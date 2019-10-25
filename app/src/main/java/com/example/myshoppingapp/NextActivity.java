@@ -5,7 +5,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CartActivity4 extends AppCompatActivity {
+public class NextActivity extends AppCompatActivity {
 
     private TextView tv;
 
