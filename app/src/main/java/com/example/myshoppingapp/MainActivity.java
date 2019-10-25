@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         edtpass = findViewById(R.id.edtpassword);
         submitbtn = findViewById(R.id.btnsubmit);
         registerbtn = findViewById(R.id.btnregister);
+        mFireBaseAuth = FirebaseAuth.getInstance();
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -43,21 +44,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
-        mFireBaseAuth = FirebaseAuth.getInstance();
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String user_login = edtuser.getText().toString();
-                String pass_login = edtpass.getText().toString();
+                String user = edtuser.getText().toString();
+                String pass = edtpass.getText().toString();
 
-                if (user_login.isEmpty()) {
+                if (user.isEmpty()) {
                     Toast.makeText(MainActivity.this, "username cannot be emtpy", Toast.LENGTH_SHORT).show();
-                } else if (pass_login.isEmpty()) {
+                } else if (pass.isEmpty()) {
                     Toast.makeText(MainActivity.this, "password cannot be empty", Toast.LENGTH_SHORT).show();
-                } else if (user_login.isEmpty() && pass_login.isEmpty()) {
+                } else if (user.isEmpty() && pass.isEmpty()) {
                     Toast.makeText(MainActivity.this, "fields cannot be empty", Toast.LENGTH_SHORT).show();
-                } else if (!(user_login.isEmpty() && pass_login.isEmpty())) {
-                    mFireBaseAuth.signInWithEmailAndPassword(user_login, pass_login).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                } else if (!(user.isEmpty() && pass.isEmpty())) {
+                    mFireBaseAuth.signInWithEmailAndPassword(user, pass).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!(task.isSuccessful())){
