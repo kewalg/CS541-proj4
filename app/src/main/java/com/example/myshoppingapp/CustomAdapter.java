@@ -6,12 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class CustomAdapter extends BaseAdapter {
+    int[] images = {R.drawable.turkey, R.drawable.broccoli, R.drawable.fish, R.drawable.milk};
 
     private Context context;
     public static ArrayList<Model> modelArrayList;
@@ -61,18 +63,16 @@ public class CustomAdapter extends BaseAdapter {
 
             holder.checkBox = (CheckBox) convertView.findViewById(R.id.cb);
             holder.tvAnimal = (TextView) convertView.findViewById(R.id.animal);
+            holder.images = (ImageView) convertView.findViewById(R.id.images);
             convertView.setTag(holder);
         } else {
-            // the getTag returns the viewHolder object set as a tag to the view
             holder = (ViewHolder) convertView.getTag();
         }
 
 
-      //  holder.checkBox.setText("Checkbox " + position);
-        holder.tvAnimal.setText(modelArrayList.get(position).getAnimal());
-
+        holder.tvAnimal.setText(modelArrayList.get(position).getFoods());
+        holder.images.setImageResource(images[position]);
         holder.checkBox.setChecked(modelArrayList.get(position).getSelected());
-
         holder.checkBox.setTag(R.integer.btnplusview, convertView);
         holder.checkBox.setTag(position);
         holder.checkBox.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +82,6 @@ public class CustomAdapter extends BaseAdapter {
                 View tempview = (View) holder.checkBox.getTag(R.integer.btnplusview);
                 TextView tv = (TextView) tempview.findViewById(R.id.animal);
                 Integer pos = (Integer) holder.checkBox.getTag();
-                Toast.makeText(context, "Checkbox " + pos + " clicked!", Toast.LENGTH_SHORT).show();
 
                 if (modelArrayList.get(pos).getSelected()) {
                     modelArrayList.get(pos).setSelected(false);
@@ -100,6 +99,7 @@ public class CustomAdapter extends BaseAdapter {
 
         protected CheckBox checkBox;
         private TextView tvAnimal;
+        private ImageView images;
 
     }
 

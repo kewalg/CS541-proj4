@@ -3,14 +3,15 @@ package com.example.myshoppingapp;
 public class Model {
 
     private boolean isSelected;
-    private String animal;
+    private String foods;
+    private Object images;
 
-    public String getAnimal() {
-        return animal;
+    public String getFoods() {
+        return foods;
     }
 
-    public void setAnimal(String animal) {
-        this.animal = animal;
+    public void setFood(String food) {
+        this.foods = food;
     }
 
     public boolean getSelected() {
@@ -20,4 +21,5 @@ public class Model {
     public void setSelected(boolean selected) {
         isSelected = selected;
     }
+
 }

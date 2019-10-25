@@ -44,10 +44,11 @@
     <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/deselect" />
+        android:layout_height="500dp"
+        android:padding="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <Button
+    <!--<Button
         android:id="@+id/select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,12 +60,22 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/select"
         android:text="Deselct all" />
-
+-->
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/deselect"
-        android:text="Next activity" />
+        android:layout_below="@id/lv"
+        android:text="Add to cart" />
+
+    <Button
+        android:id="@+id/cart_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lv"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/next"
+        android:text="view cart" />
+
 
 </RelativeLayout>

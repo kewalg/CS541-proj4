@@ -20,8 +20,8 @@ public class MenuActivity3 extends AppCompatActivity {
     private ListView lv;
     private ArrayList<Model> modelArrayList;
     private CustomAdapter customAdapter;
-    private Button btnselect, btndeselect, btnnext;
-    private String[] animallist = new String[]{"Lion", "Tiger", "Leopard", "Cat"};
+    private Button btnselect, btndeselect, btnnext, btncart;
+    private String[] food_items = new String[]{"Milk", "Chicken", "Bread", "Eggs"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,31 +29,12 @@ public class MenuActivity3 extends AppCompatActivity {
         setContentView(R.layout.activity_menu3);
 
         lv = (ListView) findViewById(R.id.lv);
-        btnselect = (Button) findViewById(R.id.select);
-        btndeselect = (Button) findViewById(R.id.deselect);
+        btncart = (Button) findViewById(R.id.cart_btn);
         btnnext = (Button) findViewById(R.id.next);
 
         modelArrayList = getModel(false);
         customAdapter = new CustomAdapter(this, modelArrayList);
         lv.setAdapter(customAdapter);
-
-
-        btnselect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                modelArrayList = getModel(true);
-                customAdapter = new CustomAdapter(MenuActivity3.this, modelArrayList);
-                lv.setAdapter(customAdapter);
-            }
-        });
-        btndeselect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                modelArrayList = getModel(false);
-                customAdapter = new CustomAdapter(MenuActivity3.this, modelArrayList);
-                lv.setAdapter(customAdapter);
-            }
-        });
         btnnext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,7 +43,13 @@ public class MenuActivity3 extends AppCompatActivity {
             }
         });
 
-
+        btncart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MenuActivity3.this, CartActivity4.class);
+                startActivity(i);
+            }
+        });
     }
 
     private ArrayList<Model> getModel(boolean isSelect) {
@@ -71,7 +58,7 @@ public class MenuActivity3 extends AppCompatActivity {
 
             Model model = new Model();
             model.setSelected(isSelect);
-            model.setAnimal(animallist[i]);
+            model.setFood(food_items[i]);
             list.add(model);
         }
         return list;
