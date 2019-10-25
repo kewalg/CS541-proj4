@@ -15,13 +15,14 @@
         <activity android:name=".RegisterActivity2"></activity>
         <activity android:name=".FinalActivity5" />
         <activity android:name=".CartActivity4" />
-        <activity android:name=".MenuActivity3" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MenuActivity3" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
         </activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
