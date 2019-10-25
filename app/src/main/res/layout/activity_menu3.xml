@@ -18,38 +18,25 @@
     <ListView
         android:id="@+id/lv_groceries"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_groceries" />
+        android:layout_height="500dp"
+        android:layout_below="@id/tv_groceries"
+        android:layout_marginBottom="20dp" />
 
-    <TextView
-        android:id="@+id/tv_clothes"
+    <Button
+        android:id="@+id/btn_addtocart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/lv_groceries"
-        android:padding="10dp"
-        android:text="Clothes"
-        android:textSize="20dp" />
+        android:text="Add to Cart" />
 
-    <ListView
-        android:id="@+id/lv_clothes"
+
+    <Button
+        android:id="@+id/btn_viewcart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_clothes" />
-
-
-    <TextView
-        android:id="@+id/tv_electronics"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lv_clothes"
-        android:padding="10dp"
-        android:text="Electronics"
-        android:textSize="20dp" />
-
-    <ListView
-        android:id="@+id/lv_electronics"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_electronics" />
+        android:layout_below="@id/lv_groceries"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@id/btn_addtocart"
+        android:text="Cart" />
 
 </RelativeLayout>

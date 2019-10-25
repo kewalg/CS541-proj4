@@ -1,37 +1,68 @@
 package com.example.myshoppingapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 import static java.util.Arrays.asList;
 
 public class MenuActivity3 extends AppCompatActivity {
 
+    ListView lv_groceries;
+    String[] grocerieslist = {"Chicken", "Milk", "Eggs", "Bread", "Broccoli", "Peas", "Peanuts", "Mix Veggies", "Pizza", "Salmon", "Ground Beef", "Talapia"};
+    int[] images = {R.drawable.turkey, R.drawable.broccoli, R.drawable.fish, R.drawable.milk};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu3);
+        lv_groceries = findViewById(R.id.lv_groceries);
 
-        ListView lv_food = findViewById(R.id.lv_groceries);
-        ArrayList<String> fooditems = new ArrayList<String>(asList("Chicken", "Milk", "Eggs", "Bread"));
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, fooditems);
-        lv_food.setAdapter(arrayAdapter);
+        CustomAdapter customAdapter = new CustomAdapter();
+        lv_groceries.setAdapter(customAdapter);
 
-        ListView lv_clothes = findViewById(R.id.lv_clothes);
-        ArrayList<String> clothitems = new ArrayList<String>(asList("Shirts", "Tshirts", "Jeans", "Joggers"));
-        ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, clothitems);
-        lv_clothes.setAdapter(arrayAdapter1);
+    }
 
-        ListView lv_electronics = findViewById(R.id.lv_electronics);
-        ArrayList<String> electronicitems = new ArrayList<String>(asList("Laptops", "Mobiles", "Earphones", "Speakers"));
-        ArrayAdapter<String> arrayAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, electronicitems);
-        lv_electronics.setAdapter(arrayAdapter2);
+    class CustomAdapter extends BaseAdapter {
 
+        @Override
+        public int getCount() {
+            return images.length;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View view = getLayoutInflater().inflate(R.layout.listview_layout, null);
+            ImageView image = view.findViewById(R.id.img_row);
+            TextView txt = view.findViewById(R.id.txt_row);
+
+            image.setImageResource(images[position]);
+            txt.setText(grocerieslist[position]);
+            return view;
+        }
     }
 }
