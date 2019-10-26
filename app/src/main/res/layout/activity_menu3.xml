@@ -6,66 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".MenuActivity3">
 
-    <!--
 
-        <TextView
-            android:id="@+id/tv_groceries"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Groceries"
-            android:textSize="20dp" />
-
-        <ListView
-            android:id="@+id/lv_groceries"
-            android:layout_width="wrap_content"
-            android:layout_height="500dp"
-            android:layout_below="@id/tv_groceries"
-            android:layout_marginBottom="20dp" />
-
-        <Button
-            android:id="@+id/btn_addtocart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lv_groceries"
-            android:text="Add to Cart" />
-
-
-        <Button
-            android:id="@+id/btn_viewcart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lv_groceries"
-            android:layout_centerInParent="true"
-            android:layout_toRightOf="@id/btn_addtocart"
-            android:text="Cart" />
-    -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lv"
+        android:layout_centerHorizontal="true"
+        android:text="Add items to the list!"
+        android:textSize="30dp" />
 
     <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:padding="10dp"
+        android:layout_centerInParent="true"
+        android:padding="30dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <!--<Button
-        android:id="@+id/select"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select all" />
-
-    <Button
-        android:id="@+id/deselect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/select"
-        android:text="Deselct all" />
--->
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/lv"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="10dp"
         android:text="Add to cart" />
 
     <Button
@@ -73,7 +38,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/lv"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/next"
         android:text="view cart" />
 

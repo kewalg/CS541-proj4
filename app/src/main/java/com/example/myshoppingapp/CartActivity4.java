@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class CartActivity4 extends AppCompatActivity {
 
     private TextView tv;
-    Button btnclear;
+    Button btnclear, btnmenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,19 +21,27 @@ public class CartActivity4 extends AppCompatActivity {
 
         tv = (TextView) findViewById(R.id.tv);
         btnclear = (Button) findViewById(R.id.btn_clearcart);
+        btnmenu = (Button) findViewById(R.id.btn_menu);
 
 
         for (int i = 0; i < CustomAdapter.modelArrayList.size(); i++) {
             if (CustomAdapter.modelArrayList.get(i).getSelected()) {
-                tv.setText(tv.getText() + " " + CustomAdapter.modelArrayList.get(i).getFoods());
+                //tv.setText(tv.getText() + "," + CustomAdapter.modelArrayList.get(i).getFoods());
+                tv.setText(tv.getText() + "\n" + CustomAdapter.modelArrayList.get(i).getFoods());
             }
         }
 
         btnclear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv.setText("");
+                tv.setText("Cart Empty!");
                 Toast.makeText(CartActivity4.this, "Cart Cleared!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnmenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent i = new Intent(CartActivity4.this, MenuActivity3.class);
                 startActivity(i);
             }

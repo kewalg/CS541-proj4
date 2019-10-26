@@ -6,26 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity2">
 
-    <EditText
-        android:id="@+id/edtusername_reg"
+
+    <TextView
+        android:id="@+id/title_reg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="enter username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="myShoppingApp"
+        android:textSize="50dp" />
+
+
+    <TextView
+        android:id="@+id/text_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_reg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="Register here!"
         android:textSize="30dp" />
+
+
+    <EditText
+        android:id="@+id/edtusername_reg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_reg"
+        android:layout_centerHorizontal="true"
+        android:hint="enter username"
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/edtpassword_reg"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/edtusername_reg"
+        android:layout_centerHorizontal="true"
         android:hint="enter password"
-        android:textSize="30dp" />
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/registerbtn_reg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/edtpassword_reg"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
         android:text="register" />
 
 

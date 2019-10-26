@@ -21,7 +21,7 @@ public class MenuActivity3 extends AppCompatActivity {
     private ArrayList<Model> modelArrayList;
     private CustomAdapter customAdapter;
     private Button btnselect, btndeselect, btnnext, btncart;
-    private String[] food_items = new String[]{"Milk", "Chicken", "Bread", "Eggs"};
+    private String[] food_items = new String[]{"- Milk", "- Chicken", "- Bread", "- Eggs"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
