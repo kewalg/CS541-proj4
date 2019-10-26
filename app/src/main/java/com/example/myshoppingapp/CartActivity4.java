@@ -3,16 +3,22 @@ package com.example.myshoppingapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Collections;
+import java.util.List;
+
 public class CartActivity4 extends AppCompatActivity {
 
     private TextView tv;
     Button btnclear, btnmenu;
+    ListView cart_listview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +28,6 @@ public class CartActivity4 extends AppCompatActivity {
         tv = (TextView) findViewById(R.id.tv);
         btnclear = (Button) findViewById(R.id.btn_clearcart);
         btnmenu = (Button) findViewById(R.id.btn_menu);
-
 
         for (int i = 0; i < CustomAdapter.modelArrayList.size(); i++) {
             if (CustomAdapter.modelArrayList.get(i).getSelected()) {

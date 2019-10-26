@@ -13,7 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class CustomAdapter extends BaseAdapter {
-    int[] images = {R.drawable.turkey, R.drawable.broccoli, R.drawable.fish, R.drawable.milk};
+    int[] images = {R.drawable.milk, R.drawable.chicken, R.drawable.bread, R.drawable.egg, R.drawable.broccoli, R.drawable.fish, R.drawable.beef, R.drawable.diet, R.drawable.cereal};
 
     private Context context;
     public static ArrayList<Model> modelArrayList;
