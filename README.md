@@ -1,3 +1,4 @@
+# CS541-proj4
 Assignment 4 - myShoppingApp
 
 In this assignment, i have made a simple shopping app, that lets new users register and existing users login. The authentication is done from firebase. Once user is verified, he gets access to the menu from where he can add items to the cart as per his/her liking. For the items in the menu, i have implemented the custom listview with checkboxes. To keep a track of the items marked, an array is maintained.
