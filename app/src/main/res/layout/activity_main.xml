@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/blackbg1"
     tools:context=".MainActivity">
 
 
@@ -12,16 +13,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="250dp"
+        android:fontFamily="@font/rajdhani"
         android:text="myShoppingApp"
+        android:textColor="#ffffff"
         android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/tvlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleapp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-5dp"
+        android:fontFamily="@font/rajdhani"
+        android:text="Login Here"
+        android:textColor="#eb1646"
+        android:textSize="25dp" />
 
     <EditText
         android:id="@+id/edtusername"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/titleapp"
+        android:layout_below="@id/tvlogin"
         android:layout_centerHorizontal="true"
+        android:fontFamily="@font/rajdhani"
         android:hint="email address"
         android:inputType="textEmailAddress"
         android:textSize="20dp" />
@@ -32,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/edtusername"
         android:layout_centerHorizontal="true"
+        android:fontFamily="@font/rajdhani"
         android:hint="password"
         android:inputType="textPassword"
         android:textSize="20dp" />
@@ -44,7 +61,11 @@
         android:layout_alignLeft="@id/edtpassword"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:text="Login" />
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/rajdhani"
+        android:padding="10dp"
+        android:text="Login"
+        android:textColor="#ffffff" />
 
 
     <Button
@@ -55,7 +76,11 @@
         android:layout_alignRight="@id/edtpassword"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:text="New user? Register" />
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/rajdhani"
+        android:padding="10dp"
+        android:text="New user? Register"
+        android:textColor="#ffffff" />
 
 
 </RelativeLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/blackbg1"
     tools:context=".RegisterActivity2">
 
 
@@ -13,7 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
+        android:fontFamily="@font/rajdhani"
         android:text="myShoppingApp"
+        android:textColor="#ffffff"
         android:textSize="50dp" />
 
 
@@ -24,7 +27,9 @@
         android:layout_below="@id/title_reg"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="2dp"
+        android:fontFamily="@font/rajdhani"
         android:text="Register here!"
+        android:textColor="#eb1646"
         android:textSize="30dp" />
 
 
@@ -34,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text_reg"
         android:layout_centerHorizontal="true"
+        android:fontFamily="@font/rajdhani"
         android:hint="enter username"
         android:textSize="20dp" />
 
@@ -43,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/edtusername_reg"
         android:layout_centerHorizontal="true"
+        android:fontFamily="@font/rajdhani"
         android:hint="enter password"
         android:textSize="20dp" />
 
@@ -52,7 +59,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/edtpassword_reg"
         android:layout_centerInParent="true"
+        android:textColor="#ffffff"
         android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/rajdhani"
+        android:padding="10dp"
         android:text="register" />
 
 
