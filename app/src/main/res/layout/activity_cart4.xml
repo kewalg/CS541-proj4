@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/blackbg1"
     tools:context=".CartActivity4">
 
     <TextView
@@ -12,7 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/cart_title"
         android:layout_centerHorizontal="true"
+        android:fontFamily="@font/rajdhani"
         android:text="myShoppingApp"
+        android:textColor="#ffffff"
         android:textSize="50dp" />
 
     <TextView
@@ -21,7 +24,10 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/tv"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="-5dp"
+        android:fontFamily="@font/rajdhani"
         android:text="Review Cart for Checkout!"
+        android:textColor="#eb1646"
         android:textSize="25dp" />
 
 
@@ -33,6 +39,7 @@
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
         android:text=""
+        android:textColor="#ffffff"
         android:textSize="20dp" />
 
     <Button
@@ -43,6 +50,9 @@
         android:layout_alignLeft="@id/cart_title"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/rajdhani"
+        android:padding="10dp"
         android:text="Clear cart" />
 
 
@@ -54,6 +64,9 @@
         android:layout_alignRight="@id/cart_title"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/rajdhani"
+        android:padding="10dp"
         android:text="Menu" />
 
     <Button
@@ -63,6 +76,9 @@
         android:layout_below="@id/btn_menu"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/rajdhani"
+        android:padding="10dp"
         android:text="Place Order" />
 
 </RelativeLayout>

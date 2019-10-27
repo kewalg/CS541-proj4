@@ -9,7 +9,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@id/images" />
+        android:layout_toRightOf="@id/images"
+        android:buttonTint="#eb1646"
+        />
 
     <TextView
         android:id="@+id/animal"
@@ -18,14 +20,16 @@
         android:layout_marginLeft="0dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/cb"
+        android:fontFamily="@font/rajdhani"
         android:text="animal"
+        android:textColor="#ffffff"
         android:textSize="20sp" />
 
     <ImageView
-        android:padding="10dp"
         android:id="@+id/images"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:src="@drawable/ic_launcher_background" />
 
 </RelativeLayout>
