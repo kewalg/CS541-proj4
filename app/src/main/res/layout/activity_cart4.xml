@@ -24,6 +24,7 @@
         android:text="Review Cart for Checkout!"
         android:textSize="25dp" />
 
+
     <TextView
         android:id="@+id/tv"
         android:layout_width="wrap_content"
@@ -54,5 +55,14 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
         android:text="Menu" />
+
+    <Button
+        android:id="@+id/btn_placeorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_menu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Place Order" />
 
 </RelativeLayout>

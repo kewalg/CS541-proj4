@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/titleapp"
         android:layout_centerHorizontal="true"
-        android:hint="email"
+        android:hint="email address"
         android:inputType="textEmailAddress"
         android:textSize="20dp" />
 
@@ -55,7 +55,7 @@
         android:layout_alignRight="@id/edtpassword"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:text="New user? Login" />
+        android:text="New user? Register" />
 
 
 </RelativeLayout>

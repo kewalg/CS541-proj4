@@ -21,7 +21,10 @@ public class MenuActivity3 extends AppCompatActivity {
     private ArrayList<Model> modelArrayList;
     private CustomAdapter customAdapter;
     private Button btnselect, btndeselect, btnnext, btncart;
-    private String[] food_items = new String[]{"Milk", "Chicken", "Bread", "Eggs", "Broccoli", "Salmon", "Ground Beef", "Mix Veggies", "Cereal"};
+    private String[] food_items = new String[]{
+            "Food Items:", "Milk", "Chicken", "Bread", "Eggs", "Broccoli", "Salmon",
+            "Electronics Items:", "TV", "Laptop", "Mobile", "Speakers", "Peripherals", "Monitors",
+            "Clothing Items:", "T-Shirts", "Shirts", "Jeans", "KnitWear", "Jackets", "Inners"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +57,7 @@ public class MenuActivity3 extends AppCompatActivity {
 
     private ArrayList<Model> getModel(boolean isSelect) {
         ArrayList<Model> list = new ArrayList<>();
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 21; i++) {
 
             Model model = new Model();
             model.setSelected(isSelect);
@@ -65,42 +68,3 @@ public class MenuActivity3 extends AppCompatActivity {
     }
 
 }
-
-    /*ListView lv_groceries;
-    String[] grocerieslist = {"Chicken", "Milk", "Eggs", "Bread", "Broccoli", "Peas", "Peanuts", "Mix Veggies", "Pizza", "Salmon", "Ground Beef", "Talapia"};
-    int[] images = {R.drawable.turkey, R.drawable.broccoli, R.drawable.fish, R.drawable.milk};*/
-        /*lv_groceries = findViewById(R.id.lv_groceries);
-
-        CustomAdapter customAdapter = new CustomAdapter();
-        lv_groceries.setAdapter(customAdapter);
-
-    }
-
-    class CustomAdapter extends BaseAdapter {
-
-        @Override
-        public int getCount() {
-            return images.length;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            View view = getLayoutInflater().inflate(R.layout.listview_layout, null);
-            ImageView image = view.findViewById(R.id.img_row);
-            TextView txt = view.findViewById(R.id.txt_row);
-
-            image.setImageResource(images[position]);
-            txt.setText(grocerieslist[position]);
-            return view;
-        }
-    }*/
